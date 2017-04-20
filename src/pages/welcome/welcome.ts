@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-//import { DataProvider } from '../../providers/data';
+
 import * as firebase from 'firebase';
 import { AngularFire} from 'angularfire2';
 /**
