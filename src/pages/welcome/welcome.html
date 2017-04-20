@@ -1,0 +1,84 @@
+<!--
+  Generated template for the Welcome page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="voda">
+     <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content  padding>
+  
+   <ion-item  class="welcome" (click)="editProfile()">
+    <div *ngIf="user">
+    <ion-row >
+      <ion-col width-20> 
+  <img class="user" src ="{{user?.img}}"/>
+  </ion-col >
+  <ion-col width-67 class="name">
+    <p>{{user?.name}}</p>
+  </ion-col>
+  <ion-col width-10>
+  </ion-col>
+  </ion-row>
+    </div>
+
+    <ion-spinner name="circles" *ngIf="!user"></ion-spinner>
+  </ion-item>  
+
+<h1> Campus </h1>
+
+ <ion-row class="logo-row">
+    <ion-col></ion-col>
+    <ion-col width-67>
+      <img class="pic" src="assets/img/campus.jpg"/>
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+  <ion-row class="title">
+    <ion-col></ion-col>
+    <ion-col width-67>
+      <h2 align="center"> InnoGarage App</h2>
+      <p align="center"> Intern's society and guide </p>
+    </ion-col>
+     <ion-col></ion-col>
+  </ion-row>
+
+
+  <div class="b-div">
+<button class="buttonz" ion-button block clear >
+  Guide
+</button>
+  
+  
+<button class="buttonz"ion-button block clear (click)="toEvents()">
+  Events
+</button>
+
+<button class="buttonz"ion-button block clear (click)="toPolls()">
+   Polls
+</button>
+  </div>
+ <!--
+<ion-fab top right edge>
+    <button ion-fab mini color="secondary"><ion-icon name="md-share"></ion-icon></button>
+    <ion-fab-list>
+     <button class="tests" ion-fab>Guide</button>
+      <button class="tests" ion-fab (click)="toEvents()">Events</button>
+      <button class="tests" ion-fab (click)="toPolls()">Polls</button>
+      <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button> 
+    </ion-fab-list>
+  </ion-fab>-->
+
+
+</ion-content>
